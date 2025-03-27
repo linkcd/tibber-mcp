@@ -43,12 +43,6 @@ Once connected to the MCP server, you can ask questions like:
    uv venv --python 3.12 && source .venv/bin/activate && uv pip install --requirement pyproject.toml
    ```
 
-## Usage
-```
-export TIBBER_API_TOKEN=[YOUR-TIBBER-TOKEN]
-python server.py
-```
-
 ## Host Configuration
 In Claude Desktop or Roo Code in VS
 ```json
@@ -71,11 +65,11 @@ In Claude Desktop or Roo Code in VS
 ```
 > **IMPORTANT**: Replace `[YOUR-TIBBER-TOKEN]` with your actual token. Never commit actual credentials to version control.
 
+
 ### Available Tools
 The server exposes the following tools that LLM can use:
-1. **`get_consumption_data()`**: Get power consumption data for the last 30 days
-2. **`get_price_info()`**: Get price info of electricity
-3. **`get_user_info()`**: Get user information such as name and address from tibber
+1. **`get_consumption_data()`**: Get the hourly consumption data for the last 30 days, such as time period, total cost, base energy cost, and consumpted kwh
+2. **`get_price_and_home_info()`**: Get price info (current, today and tomorrow) and home info (owner, address, subscription...)
 
 
 ## License

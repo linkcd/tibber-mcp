@@ -16,30 +16,18 @@ logger = logging.getLogger(__name__)
 # Initialize FastMCP server
 mcp = FastMCP("tibber-mcp")
 
-@mcp.tool()
-async def get_user_info() -> str:
-    """Get user information such as name and address
-    """
-    tibber_connection = tibber.Tibber(tibber_api_token, user_agent="change_this")
-    await tibber_connection.update_info()
-    name = tibber_connection.name
-
-    home = tibber_connection.get_homes()[0]
-    await home.fetch_consumption_data()
-    await home.update_info()
-    address = home.address1
-
-    result = f"{name}, {address}"
-
-    await tibber_connection.close_connection()
-    return result
 
 @mcp.tool()
-async def get_price_info() -> str:
-    """Get price info of electricity, the currency is NOK.
+async def get_price_and_home_info() -> str:
+    """Get the infomation of:
+        1. current price, with price break down, price level, and currency
+        2. hourly price and price level of today
+        3. hourly price and price level of tomorrow
+        4. home address info, timezone etc
+    the currency is applying to all prices
     """
     try:
-        tibber_connection = tibber.Tibber(tibber_api_token, user_agent="change_this")
+        tibber_connection = tibber.Tibber(tibber_api_token, user_agent="tibber-mcp")
         await tibber_connection.update_info()
         
         homes = tibber_connection.get_homes()
@@ -48,12 +36,10 @@ async def get_price_info() -> str:
             return "No homes found"
         
         home = homes[0]
-        await home.update_price_info()
+        await home.update_info_and_price_info() #using predefined query UPDATE_INFO_PRICE for getting most of info such as current price, today and tomorrow price, home info and subscription etc
+        result = home.info 
 
         await tibber_connection.close_connection()
-        
-        result = home.price_total
-        logger.info(f"electricity price info: {result}")
         return str(result)
     
     except Exception as e:
@@ -62,10 +48,10 @@ async def get_price_info() -> str:
 
 @mcp.tool()
 async def get_consumption_data() -> str:
-    """Get power consumption data for the last 30 days, the currency is NOK.
+    """Get the hourly consumption data for the last 30 days, such as time period, total cost, base energy cost, and consumpted kwh.
     """
     try:
-        tibber_connection = tibber.Tibber(tibber_api_token, user_agent="change_this")
+        tibber_connection = tibber.Tibber(tibber_api_token, user_agent="tibber-mcp")
         await tibber_connection.update_info()
         
         homes = tibber_connection.get_homes()
