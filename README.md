@@ -4,14 +4,16 @@ This is [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduct
 You can run the MCP server locally and access it via the different host such as Claude Desktop or [Roo Code](https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline).
 
 ## Overview
+This Tibber MCP server provides AI agent a convenient way to talk to [Tibber API](https://developer.tibber.com/docs), and query information such as current price and your consumption.
 
-This tool provides a convenient way to talk to [Tibber API](https://developer.tibber.com/docs), and query information such as current price and your consumption.
-
-### Example Queries
+## Example Queries
 Once connected to the MCP server, you can ask questions like:
 - "Analyze my power consumption data and present the usual peak hours and any other interesting patterns in an easy-to-read format."
 - "When did I use the most power yesterday?"
 - "How much power I consumpted yesterday 7AM?"
+
+## Demo video
+[![Tibber MCP Demo](https://img.youtube.com/vi/FiqKPa9i6V4/0.jpg)](https://www.youtube.com/watch?v=FiqKPa9i6V4)
 
 
 ## Requirements
