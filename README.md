@@ -11,6 +11,9 @@ Once connected to the MCP server, you can ask questions like:
 - "Analyze my power consumption data and present the usual peak hours and any other interesting patterns in an easy-to-read format."
 - "When did I use the most power yesterday?"
 - "How much power I consumpted yesterday 7AM?"
+- "What is the current energy price?"
+- "List the 3 cheapest hours of tomorrow."
+- "Is the energy price higher or lower tomorrow?"
 
 ## Demo video
 [![Tibber MCP Demo](https://img.youtube.com/vi/FiqKPa9i6V4/0.jpg)](https://www.youtube.com/watch?v=FiqKPa9i6V4)
