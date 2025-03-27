@@ -56,7 +56,7 @@ In Claude Desktop or Roo Code in VS
          "command":"uv",
          "args":[
             "--directory",
-            "[PATH-TO-ROOT-OF-THE-CLONED-FOLDER]/tibber-mcp",
+            "[PATH-TO-ROOT-OF-THE-CLONED-TIBBER-MCP-FOLDER]",
             "run",
             "server.py"
          ],
@@ -70,9 +70,10 @@ In Claude Desktop or Roo Code in VS
 > **IMPORTANT**: Replace `[YOUR-TIBBER-TOKEN]` with your actual token. Never commit actual credentials to version control.
 
 ### Available Tools
-The server exposes the following tools that Claude can use:
-
-1. **`get_ec2_spend_last_day()`**: Retrieves EC2 spending data for the previous day
+The server exposes the following tools that LLM can use:
+1. **`get_consumption_data()`**: Get power consumption data for the last 30 days
+2. **`get_price_info()`**: Get price info of electricity
+3. **`get_user_info()`**: Get user information such as name and address from tibber
 
 
 ## License
