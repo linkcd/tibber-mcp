@@ -1,0 +1,12 @@
+[project]
+name = "Tibber_MCP"
+author = "Feng Lu (https://feng.lu)"
+version = "0.1.0"
+description = "A Model Context Protocol (MCP) Server for Tibber, a Norwegian power supplier."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.5.0",
+    "pytibber>=0.30.8",
+]
