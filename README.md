@@ -1,23 +1,29 @@
-# Tibber MCP
-This is [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) Server for [Tibber](https://tibber.com/), a Norwegian power supplier. 
+# Tibber MCP Server
+This is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) Server for [Tibber](https://tibber.com/), a Norwegian power supplier.
 
-You can run the MCP server locally and access it via the different host such as Claude Desktop or [Roo Code](https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline).
+You can run the MCP server locally and access it via different hosts such as Claude Desktop or [Roo Code](https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline).
+
+For more details, check out my blog post:  
+[Building a Tibber MCP Server: Connect Your AI Agent to Energy Consumption Data](https://feng.lu/2025/03/28/Building-a-Tibber-MCP-Server-Connect-Your-AI-Agent-to-Energy-Consumption-Data/)
 
 ## Overview
-This Tibber MCP server provides AI agent a convenient way to talk to [Tibber API](https://developer.tibber.com/docs), and query information such as current price and your consumption.
+The Tibber MCP server provides an AI agent with a convenient way to interact with the [Tibber API](https://developer.tibber.com/docs) and query information such as current energy prices and your energy consumption data.
 
 ## Example Queries
 Once connected to the MCP server, you can ask questions like:
 - "Analyze my power consumption data and present the usual peak hours and any other interesting patterns in an easy-to-read format."
 - "When did I use the most power yesterday?"
-- "How much power I consumpted yesterday 7AM?"
+- "How much power did I consume yesterday at 7 AM?"
 - "What is the current energy price?"
 - "List the 3 cheapest hours of tomorrow."
 - "Is the energy price higher or lower tomorrow?"
 
+
 ## Demo video
 [![Tibber MCP Demo](https://img.youtube.com/vi/FiqKPa9i6V4/0.jpg)](https://www.youtube.com/watch?v=FiqKPa9i6V4)
 
+## Architecture
+![Architecture](./doc/tibber-mcp-architecture.png)
 
 ## Requirements
 - Python 3.12
