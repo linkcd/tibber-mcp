@@ -74,6 +74,11 @@ In Claude Desktop or Roo Code in VS
 ```
 > **IMPORTANT**: Replace `[YOUR-TIBBER-TOKEN]` with your actual token. Never commit actual credentials to version control.
 
+### Debug and test the MCP server locally
+Run the server locally and run [MCP inspector](https://github.com/modelcontextprotocol/inspector) against it
+```bash
+npx @modelcontextprotocol/inspector -e TIBBER_API_TOKEN=[YOUR-TIBBER-TOKEN] python server.py
+```
 
 ### Available Tools
 The server exposes the following tools that LLM can use:
