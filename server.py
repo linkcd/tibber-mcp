@@ -72,5 +72,5 @@ async def get_consumption_data() -> str:
         return f"Error: {str(e)}"
 
 if __name__ == "__main__":
-    # Initialize and run the server
-    mcp.run(transport='stdio')
+    # Run the server with the specified transport
+    mcp.run(transport=os.environ.get('MCP_TRANSPORT', 'stdio'))
