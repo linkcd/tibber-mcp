@@ -1,3 +1,5 @@
+[![MseeP Badge](https://mseep.net/pr/linkcd-tibber-mcp-badge.jpg)](https://mseep.ai/app/linkcd-tibber-mcp)
+
 # Tibber MCP Server
 This is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) Server for [Tibber](https://tibber.com/), a Norwegian power supplier.
 
