@@ -1,4 +1,6 @@
 # Tibber MCP Server
+[![smithery badge](https://smithery.ai/badge/@linkcd/tibber-mcp)](https://smithery.ai/server/@linkcd/tibber-mcp)
+
 This is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) Server for [Tibber](https://tibber.com/), a Norwegian power supplier.
 
 You can run the MCP server locally and access it via different hosts such as Claude Desktop or [Roo Code](https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline).
@@ -30,6 +32,16 @@ Once connected to the MCP server, you can ask questions like:
 - Tibber API token (You can get it from [Tibber developer portal](https://developer.tibber.com/settings/access-token))
 
 ## Installation
+
+### Installing via Smithery
+
+To install Tibber MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@linkcd/tibber-mcp):
+
+```bash
+npx -y @smithery/cli install @linkcd/tibber-mcp --client claude
+```
+
+### Manual Installation
 1. Install `uv`:
    ```bash
    # On macOS and Linux
